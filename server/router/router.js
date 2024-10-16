@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../model/Signup')
 const jweb = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
-const secret = process.env.Secret_code
+const secret = iwfhugafwofjwhig3hwigk3wnig3uwmgkmewoipj39gw8hqoijhi3hgwgkwni
 
 const authMiddleware = require('../auth/authMiddleware')
 
