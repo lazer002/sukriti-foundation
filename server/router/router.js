@@ -47,6 +47,8 @@ router.post('/signup', async (req, res) => {
       password: hashedPassword
     });
 
+
+    
     await Userdata.save();
     const token = jweb.sign({ email }, secret, { expiresIn: '3d' });
     res.status(201).json({ token, msg: 'Account Created Successfully' });
