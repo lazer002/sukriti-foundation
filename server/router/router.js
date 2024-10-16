@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../model/Signup')
 const jweb = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
-const secret = process.env.Secret_code
+const secret = 'iwfhugafwofjwhig3hwigk3wnig3uwmgkmewoipj39gw8hqoijhi3hgwgkwni'
 
 const authMiddleware = require('../auth/authMiddleware')
 
@@ -48,7 +48,7 @@ router.post('/signup', async (req, res) => {
     });
 
 
-    
+
     await Userdata.save();
     const token = jweb.sign({ email }, secret, { expiresIn: '3d' });
     res.status(201).json({ token, msg: 'Account Created Successfully' });
